@@ -17,4 +17,4 @@ ci_compile:
   only:
   - dev
   script:
-    truffle compile
+   - truffle compile
