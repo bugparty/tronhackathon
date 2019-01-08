@@ -1,5 +1,5 @@
 variables:
-image: node:10
+image: bowmanhan/truffle-ci:latest
 
 cache:
   paths:
