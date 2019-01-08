@@ -9,7 +9,7 @@ stages:
 - build
 
 before_script:
-  - npm install --progress=false
+  - npm install
 
 
 ci_compile:
