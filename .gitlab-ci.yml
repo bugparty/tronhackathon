@@ -9,6 +9,7 @@ stages:
 - build
 
 before_script:
+  - rm -f package-lock.json
   - npm install
 
 
