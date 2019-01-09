@@ -1,23 +1,24 @@
-pragma solidity ^0.4.24;  
-
+pragma solidity ^0.4.19;  
+  
 import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";  
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";  
   
-
-
 /**  
 * @title BearToken is a basic ERC20 Token  
-*/
-contract BearToken is StandardToken, Ownable{   
+*/  
+contract CubToken is StandardToken, Ownable{  
+  
   uint256 public totalSupply;  
   string public name;  
   string public symbol;  
   uint32 public decimals;  
   
-  /**  
- * @dev assign totalSupply to account creating this contract */  constructor() public {  
-  symbol = "BEAR";  
-  name = "BearToken";  
+ /**  
+ * @dev assign totalSupply to account creating this contract 
+ */  
+ constructor() public {  
+  symbol = "CUB";  
+  name = "CubToken";  
   decimals = 5;  
   totalSupply = 100000000000;  
   

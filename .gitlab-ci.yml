@@ -7,15 +7,25 @@ cache:
 
 stages:
 - build
+- test
 
 before_script:
   - rm -f package-lock.json
   - npm install
 
 
-ci_compile:
+build_stage:
   stage: build
   only:
   - dev
   script:
    - truffle compile
+
+test_stage:
+  stage: test
+  only:
+  - dev
+  script:
+   - ganache-cli
+   - truffle migrate
+   - truffle test
