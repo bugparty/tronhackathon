@@ -19,6 +19,6 @@ test_stage:
   - dev
   script:
    - truffle compile
-   - nohup ganache-cli -q &
+   - nohup ganache-cli -p 7545 -q &
    - truffle migrate
    - truffle test
