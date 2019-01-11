@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e47cdd-6ba5-4cf0-b810-a99ce6ca7182" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/ethapp/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-369">
-              <caret line="197" column="15" lean-forward="true" selection-start-line="197" selection-start-column="15" selection-end-line="197" selection-end-column="15" />
+              <caret line="197" column="15" selection-start-line="197" selection-start-column="15" selection-end-line="197" selection-end-column="15" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#2778#3548#0" />
@@ -32,20 +31,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ethapp/src/Components/TradeMarkBlock.js">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/build/contracts/TokenGateway.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="6198" column="60" selection-start-line="6198" selection-start-column="18" selection-end-line="6198" selection-end-column="60" />
-              <folding>
-                <element signature="e#45#6299#0" />
-                <element signature="n#!!block;n#ast#0;n#!!top" />
-                <element signature="n#!!block;n#legacyAST#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -69,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/ethapp/src/Components/SortTokenBlock.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -77,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ethapp/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -96,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/ethapp/src/Contracts/EthGateway.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -105,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/ethapp/src/Contracts/all.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -175,46 +160,14 @@
               <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
               <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
               <item name="ethapp" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
+              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="contracts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Tokens" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
@@ -282,16 +235,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547196424094</updated>
-      <workItem from="1547196429748" duration="17409000" />
+      <workItem from="1547196429748" duration="17860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17409000" />
+    <option name="totallyTimeSpent" value="17860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="52" width="1440" height="797" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
@@ -532,21 +484,21 @@
     <entry file="file://$PROJECT_DIR$/ethapp/src/Contracts/EthGateway.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ethapp/src/Contracts/all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ethapp/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-369">
-          <caret line="197" column="15" lean-forward="true" selection-start-line="197" selection-start-column="15" selection-end-line="197" selection-end-column="15" />
+          <caret line="197" column="15" selection-start-line="197" selection-start-column="15" selection-end-line="197" selection-end-column="15" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#2778#3548#0" />
@@ -610,14 +562,14 @@
     <entry file="file://$PROJECT_DIR$/ethapp/src/Components/SortTokenBlock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ethapp/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="270">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>

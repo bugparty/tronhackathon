@@ -1,4 +1,4 @@
-import PaxToken from '../build/contracts/PaxToken.json';
+import PaxToken from '../contractRes/PaxToken.json';
 export default {
     address: PaxToken.networks[5777].address,
     decimal: 5,
