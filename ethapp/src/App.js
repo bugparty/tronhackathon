@@ -7,7 +7,7 @@ import Description from './Components/Description';
 import Container from './Components/Container';
 import InstallMetamask from './Components/InstallMetamask';
 import UnlockMetamask from './Components/UnlockMetamask';
-import TokenGateway from './contractRes/contracts/TokenGateway.json';
+import TokenGateway from './contractRes/TokenGateway.json';
 
 
 import logo from './logo.svg';
