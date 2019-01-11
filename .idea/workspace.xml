@@ -2,74 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e47cdd-6ba5-4cf0-b810-a99ce6ca7182" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/protonwallet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/contracts/DaiToken.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/contracts/Migrations.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/contracts/PaxToken.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/contracts/PaxTokenERC20.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/contracts/WalletContract.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/migrations/1_initial_migration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/migrations/3_deploy_dai_token.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/migrations/4_deploy_pax_token.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/public/icons/DaiToken.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/public/icons/PaxToken.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/public/icons/bear_x28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/public/icons/metamask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/AddressBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/Container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/Description.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/FailedTransaction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/InputField.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/InstallMetamask.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/Nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/SortTokenBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/SuccessTransaction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/TokenBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/TradeMarkBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/TransferHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/TransferToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/UnlockMetamask.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Contracts/EthGateway.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Contracts/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Tokens/Dai.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Tokens/Pax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Tokens/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/test/token_managenment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/test/token_transfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/truffle-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/BearToken.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/CubToken.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/Migrations.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/PaxTokenERC20.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/TokenZendR.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/WalletContract.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/1_initial_migration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/2_deploy_contracts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/3_deploy_bear_token.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/token_managenment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/token_transfer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -343,12 +276,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547196424094</updated>
-      <workItem from="1547196429748" duration="16692000" />
+      <workItem from="1547196429748" duration="16985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16692000" />
+    <option name="totallyTimeSpent" value="16985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="52" width="1440" height="797" extended-state="0" />
