@@ -4,9 +4,9 @@ import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";  
   
 /**  
-* @title BearToken is a basic ERC20 Token  
+* @title PaxToken is a fake pax ERC20 Token  
 */  
-contract CubToken is StandardToken, Ownable{  
+contract PaxToken is StandardToken, Ownable{  
   
   uint256 public totalSupply;  
   string public name;  
@@ -17,8 +17,8 @@ contract CubToken is StandardToken, Ownable{
  * @dev assign totalSupply to account creating this contract 
  */  
  constructor() public {  
-  symbol = "CUB";  
-  name = "CubToken";  
+  symbol = "Pax";  
+  name = "Paxos Stardand Token";  
   decimals = 5;  
   totalSupply = 100000000000;  
   
