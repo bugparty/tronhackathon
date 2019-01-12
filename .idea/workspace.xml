@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6e47cdd-6ba5-4cf0-b810-a99ce6ca7182" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ethapp/src/Tokens/Dai.js" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/src/Tokens/Dai.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethapp/src/contractRes/DaiToken.json" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/src/contractRes/DaiToken.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tronapp/contracts/DaiToken.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,89 +17,40 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/src/App.js">
+        <entry file="file://$PROJECT_DIR$/ethapp/contracts/DaiToken.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#2778#3548#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/src/contractRes/DaiToken.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26499" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/build/contracts/DaiToken.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="1791" column="60" selection-start-line="1791" selection-start-column="18" selection-end-line="1791" selection-end-column="60" />
+            <state relative-caret-position="238">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ethapp/src/Tokens/Dai.js">
+        <entry file="file://$PROJECT_DIR$/tronapp/contracts/tokens/TRC20/TRC20.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-            </state>
+            <state relative-caret-position="-180" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/src/Tokens/Pax.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="36" selection-start-column="36" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/src/Components/TransferHeader.js">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/src/Components/SortTokenBlock.js">
+        <entry file="file://$PROJECT_DIR$/tronapp/migrations/2_deploy_contracts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/package.json">
+        <entry file="file://$PROJECT_DIR$/ethapp/build/contracts/PaxToken.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/src/Contracts/EthGateway.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="38" selection-start-column="24" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ethapp/src/Contracts/all.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="246">
+              <caret line="1791" column="60" selection-start-line="1791" selection-start-column="18" selection-end-line="1791" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -136,9 +87,11 @@
         <option value="$PROJECT_DIR$/ethapp/src/Tokens/all.js" />
         <option value="$PROJECT_DIR$/ethapp/package.json" />
         <option value="$PROJECT_DIR$/ethapp/src/Contracts/EthGateway.js" />
-        <option value="$PROJECT_DIR$/ethapp/src/Tokens/Pax.js" />
         <option value="$PROJECT_DIR$/ethapp/src/App.js" />
         <option value="$PROJECT_DIR$/ethapp/src/Tokens/Dai.js" />
+        <option value="$PROJECT_DIR$/ethapp/src/Tokens/Pax.js" />
+        <option value="$PROJECT_DIR$/ethapp/build/contracts/DaiToken.json" />
+        <option value="$PROJECT_DIR$/tronapp/migrations/2_deploy_contracts.js" />
       </list>
     </option>
   </component>
@@ -169,27 +122,40 @@
               <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
               <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
               <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="contracts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
               <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
               <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="ethapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="contractRes" type="462c0819:PsiDirectoryNode" />
+              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
+              <item name="contracts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
+              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
+              <item name="contracts" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
+              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
+              <item name="contracts" type="462c0819:PsiDirectoryNode" />
+              <item name="tokens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
+              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
+              <item name="contracts" type="462c0819:PsiDirectoryNode" />
+              <item name="tokens" type="462c0819:PsiDirectoryNode" />
+              <item name="TRC20" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,6 +173,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tronapp/contracts" />
       <recent name="$PROJECT_DIR$/ethapp/src/Components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -251,12 +218,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547196424094</updated>
-      <workItem from="1547196429748" duration="19127000" />
+      <workItem from="1547196429748" duration="20981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19127000" />
+    <option name="totallyTimeSpent" value="20981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="52" width="1440" height="797" extended-state="0" />
@@ -284,75 +251,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ethapp/src/App.js</url>
-          <line>257</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ethapp/src/App.js</url>
-          <line>254</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ethapp/build/contracts/BearToken.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/migrations/3_deploy_bear_token.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/build/contracts/TokenZendR.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="6194" column="15" selection-start-line="6194" selection-start-column="15" selection-end-line="6194" selection-end-column="15" />
-          <folding>
-            <element signature="e#43#6297#0" />
-            <element signature="n#!!block;n#ast#0;n#!!top" />
-            <element signature="e#34614#150358#0" />
-            <element signature="n#!!block;n#legacyAST#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/contracts/BearToken.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/migrations/4_deploy_token_zendr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/public/icons/DaiToken.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/public/icons/bear_x28.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ethapp/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -385,16 +284,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ethapp/contracts/WalletContract.sol">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/contracts/PaxToken.sol">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/contracts/DaiToken.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ethapp/contracts/TokenZendR.sol">
       <provider selected="true" editor-type-id="text-editor">
@@ -541,13 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ethapp/src/Contracts/all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -559,13 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="38" selection-start-column="24" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/src/Tokens/Pax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -585,7 +460,14 @@
         <state relative-caret-position="-26499" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ethapp/build/contracts/DaiToken.json">
+    <entry file="file://$PROJECT_DIR$/ethapp/src/Tokens/Pax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ethapp/build/contracts/PaxToken.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="1791" column="60" selection-start-line="1791" selection-start-column="18" selection-end-line="1791" selection-end-column="60" />
@@ -597,6 +479,63 @@
         <state relative-caret-position="30">
           <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/migrations/2_deploy_contracts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ethapp/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/tronbox-config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/tronbox.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ethapp/build/contracts/DaiToken.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26865">
+          <caret line="1791" column="19" selection-start-line="1791" selection-start-column="19" selection-end-line="1791" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ethapp/contracts/PaxToken.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ethapp/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/contracts/DaiToken.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ethapp/contracts/DaiToken.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/contracts/tokens/TRC20/TRC20.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180" />
       </provider>
     </entry>
   </component>

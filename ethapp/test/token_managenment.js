@@ -1,5 +1,5 @@
 
-const TokenZendR = artifacts.require('TokenZendR');  
+const TokenGateway = artifacts.require('TokenGateway');  
   
 const should = require('chai')  
  .use(require('chai-as-promised'))  
@@ -9,7 +9,7 @@ let sender;
   
 contract('token_management', async (accounts) => {
   beforeEach(async () => {  
-	  sender = await TokenZendR.new();  
+	  sender = await TokenGateway.new();  
 	  await sender.addNewToken('OPEN', '0x69c4bb240cf05d51eeab6985bab35527d04a8c64');  
   });
   
