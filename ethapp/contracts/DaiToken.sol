@@ -16,7 +16,7 @@ contract DaiToken is StandardToken, Ownable{
 
   /**
  * @dev assign totalSupply to account creating this contract */  constructor() public {
-  symbol = "Dai";
+  symbol = "DAI";
   name = "DaiToken";
   decimals = 5;
   totalSupply = 100000000000;

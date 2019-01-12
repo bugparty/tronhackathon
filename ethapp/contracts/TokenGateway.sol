@@ -119,8 +119,8 @@ contract TokenGateway is Ownable, Pausable {
     }
 
     function deposit(bytes32 symbol_, uint256 amount_) public whenNotPaused {
-        require(tokens[symbol_] != 0x0);
-        require(amount_ > 0);
+        require(tokens[symbol_] != 0x0, "invalid symbol");
+        require(amount_ > 0 ,"amount must greater than 0");
 
         address contract_ = tokens[symbol_];
         address from_ = msg.sender;
@@ -157,8 +157,9 @@ contract TokenGateway is Ownable, Pausable {
     * @param amount_ numbers of token to transfer
     */
     function transferTokens(bytes32 symbol_, address to_, uint256 amount_) public whenNotPaused {
-        require(tokens[symbol_] != 0x0);
-        require(amount_ > 0);
+        require(tokens[symbol_] != 0x0, "invalid symbol");
+        require(amount_ > 0 ,"amount must greater than 0");
+
 
         address contract_ = tokens[symbol_];
         address from_ = msg.sender;
@@ -177,7 +178,7 @@ contract TokenGateway is Ownable, Pausable {
 
         if (amount_ > ERC20Interface.allowance(from_, address(this))) {
             emit TransferFailed(from_, to_, amount_);
-            revert();
+            revert("amount greater then allowance");
         }
         ERC20Interface.transferFrom(from_, to_, amount_);
 

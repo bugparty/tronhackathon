@@ -87,6 +87,35 @@ contract('token_transfer', function(accounts) {
 
     });
 
+    it("should be able to deposit to contract", async() => {
+        // When transfering  token, multiple by
+        //figure of decimal to get exact token e.g
+        //to send 5 BEAR = 5e5, where 5 is the decimal places
+        let amount = new BigNumber(500000e5);
+
+        //Account a approve contract to spend on behalf
+        await dai.approve(sender.address, amount,{from: accountA});
+
+        await sender.transferTokens('DAI',accountB, amount,{from: accountA});
+
+        let balance = ((await dai.balanceOf(accountB)).toString());
+
+        balance.should.equal(amount.toString())
+
+        await dai.approve(sender.address, amount,{from: accountB});
+        await sender.deposit('DAI', amount,{from: accountB});
+
+        let balance2 = ((await sender.balanceOfAvailable(accountB, 'DAI')).toString());
+        balance2.should.equal(amount.toString())
+
+        let amount2 = new BigNumber(100000e5);
+
+        await sender.freezeToken(accountB, 'DAI', amount2,{from: accountA});
+
+        let balance3 = ((await sender.balanceOfFreezed(accountB, 'DAI')).toString());
+
+        balance3.should.equal(amount2.toString());
+    });
 
 
 

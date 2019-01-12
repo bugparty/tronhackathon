@@ -8,7 +8,7 @@ import Container from './Components/Container';
 import InstallMetamask from './Components/InstallMetamask';
 import UnlockMetamask from './Components/UnlockMetamask';
 import TokenGateway from './contractRes/TokenGateway.json';
-
+import {EthGateway} from './Contracts/all'
 
 import logo from './logo.svg';
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
       super();
 
       this.tokens = Tokens;  //list of supported tokens by token-zendr contract
-      this.appName = 'Eth-Tron-Gateway';
+      this.appName = 'Eth-Gateway Market Maker panel';
       this.isWeb3 = true; //If metamask is installed
       this.isWeb3Locked = false; //If metamask account is locked
 
@@ -33,6 +33,7 @@ class App extends Component {
           account: null,            //address of the currently unlocked metamask
           tokens: [],               //list of supported tokens owned by the user address
           transferDetail: {},
+          depositDetail: {},
           fields: {                 //form fields to be submitted for a transfer to be initiated
               receiver: null,
               amount: null,
@@ -108,6 +109,15 @@ class App extends Component {
      })
  };
 
+//When a new transfer is initiated
+//set details of the token to be
+//transfered such as the address, symbol.. etc
+newDeposit = (index) => {
+    this.setState({
+        depositDetail: this.state.tokens[index]
+    })
+};
+
   //Called at the end of a successful
   //transfer to cclear form fields & transferDetails
   closeTransfer = () => {
@@ -116,6 +126,15 @@ class App extends Component {
           fields: {},
      })
  };
+
+//Called at the end of a successful
+//transfer to cclear form fields & transferDetails
+closeDeposit = () => {
+    this.setState({
+        depositDetail: {},
+        fields: {},
+    })
+};
 
   setGasPrice = () => {
       this.web3.eth.getGasPrice((err,price) => {
@@ -135,6 +154,7 @@ class App extends Component {
   resetApp = () => {
       this.setState({
           transferDetail: {},
+          depositDetail: {},
           fields: {
               receiver: null,
               amount: null,
@@ -157,27 +177,30 @@ class App extends Component {
                           this.state.transferDetail.address);
       let transObj = {
       from: this.state.account,
-      gas: this.state.defaultGasLimit,
-      gasPrice: this.state.defaultGasPrice
+      //gas: this.state.defaultGasLimit,
+      //gasPrice: this.state.defaultGasPrice
       };
       let app = this;
       //Use the decimal places the token creator set to get actual amount of tokens to transfer
-      let amount = this.state.fields.amount + 'e' + this.state.transferDetail.decimal;
+      //Use the decimal places the token creator set to get actual amount of tokens to transfer
+      let amount = this.state.fields.amount * Math.pow(10,this.state.transferDetail.decimal) ;
       let symbol = this.state.transferDetail.symbol;
       let receiver = this.state.fields.receiver;
 
-  amount = new this.web3.utils.BN(amount).toNumber();
 
 
-  //Approve the token-zendr contract to spend on your behalf
+    //debugger;
+  //Approve the tokenGateway contract to spend on your behalf
   contract.methods.approve(this.state.tzAddress, amount )
       .send(transObj).then(response => {
+
           app.tokenGateway.deployed().then((instance) => {
               console.log('approved')
               this.tokenGatewayInstance = instance;
               this.watchEvents();
               console.log('started transfer,', symbol, receiver, amount, transObj)
               //Transfer the token to third party on user behalf
+
               this.tokenGatewayInstance.transferTokens(symbol, receiver, amount, transObj)
                   .then((response, err) => {
 
@@ -201,6 +224,60 @@ class App extends Component {
 
      } , console.log);
  };
+  Deposit = () => {
+        //Set to true to allow some component disabled
+        //and button loader to show transaction progress
+        this.setState({
+            inProgress: true
+        });
+
+        //Use the ABI of a token at a particular address to call its methods
+        let contract = new this.web3.eth.Contract(this.state.depositDetail.abi,
+            this.state.depositDetail.address);
+        let transObj = {
+            from: this.state.account,
+            //gas: this.state.defaultGasLimit,
+            //gasPrice: this.state.defaultGasPrice
+        };
+        let app = this;
+        //Use the decimal places the token creator set to get actual amount of tokens to transfer
+        let amount = this.state.fields.amount * Math.pow(10,this.state.depositDetail.decimal) ;
+        let symbol = this.state.depositDetail.symbol;
+        let receiver = EthGateway.address;
+
+        //Approve the token-zendr contract to spend on your behalf
+        contract.methods.approve(receiver , amount )
+            .send(transObj).then(response => {
+            app.tokenGateway.deployed().then((instance) => {
+                    console.log('approved')
+                    this.tokenGatewayInstance = instance;
+                    this.watchEvents();
+
+                    console.log('started deposit,', symbol, amount, transObj)
+                    //Transfer the token to third party on user behalf
+                    this.tokenGatewayInstance.deposit(symbol,  amount, transObj)
+                        .then((response, err) => {
+
+                            if (response) {
+                                console.log(response);
+
+                                app.resetApp();
+
+                                app.setState({
+                                    tx: response.tx,
+                                    inProgress: false
+                                });
+                            } else {
+                                console.log(err);
+                            }
+                        });
+                }
+            )
+
+
+
+        } , console.log);
+    };
 
  /**
  * @dev Just a console log to list all transfers
@@ -230,8 +307,8 @@ class App extends Component {
 
       window.ethereum.enable().then(()=>{
           this.web3.eth.getCoinbase()
-              .then(console.log);
-              this.web3.eth.getCoinbase().then((coinbase) => {
+          .then(console.log);
+          this.web3.eth.getCoinbase().then((coinbase) => {
               let account = coinbase;
               let app = this;
 
@@ -242,6 +319,7 @@ class App extends Component {
               this.setState({
                   account
               });
+
               //Loop through list of allowed tokens
               //using the token ABI & contract address
               //call the balanceOf method to see if this
@@ -268,19 +346,34 @@ class App extends Component {
                           balance = balance >= 0 ? balance : 0;
                           let tokens = app.state.tokens;
                           let showZeroBalance = true;
-                          if(showZeroBalance || balance > 0) tokens.push({
-                              decimal,
-                              balance,
-                              name,
-                              symbol,
-                              icon,
-                              abi,
-                              address,
-                          });
+                      let contractBalance;
+                      let contractFreezed;
+                      app.tokenGateway.deployed().then((instance) => {
 
-                          app.setState({
-                              tokens
-                          })
+
+                           instance.balanceOf(account, symbol, {from:account}).then((response, err) => {
+                               contractBalance = response.toNumber();
+                               instance.balanceOfFreezed(account, symbol, {from:account}).then((response, err) => {
+                                   contractFreezed = response.toNumber();
+                                   if(showZeroBalance || balance > 0) tokens.push({
+                                       decimal,
+                                       balance,
+                                       name,
+                                       symbol,
+                                       icon,
+                                       abi,
+                                       address,
+                                       contractBalance,
+                                       contractFreezed
+                                   });
+
+                                   app.setState({
+                                       tokens
+                                   })
+
+                               })
+                           })
+                      });
 
                   });
               });
@@ -307,9 +400,13 @@ class App extends Component {
                  <Description />
                  <Container onInputChangeUpdateField={this.onInputChangeUpdateField}
                               transferDetail={this.state.transferDetail}
+                              depositDetail={this.state.depositDetail}
                               closeTransfer={this.closeTransfer}
+                              closeDeposit={this.closeDeposit}
                               newTransfer={this.newTransfer}
+                              newDeposit={this.newDeposit}
                               Transfer={this.Transfer}
+                              Deposit={this.Deposit}
                               account={this.state.account}
                               defaultGasPrice={this.state.defaultGasPrice}
                               defaultGasLimit={this.state.defaultGasLimit}

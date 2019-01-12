@@ -1,9 +1,9 @@
 import PaxToken from '../contractRes/PaxToken.json';
 export default {
-    address: "0xa4bc85301f8feb4508812e5d06fc26ace7824262",
+    address: PaxToken.networks[5777].address,
     decimal: 5,
     name: "Paxos Standard Token",
-    symbol: "Pax",
+    symbol: "PAX",
     icon: "PaxToken.png",
     abi : PaxToken.abi,
     network: PaxToken.network
