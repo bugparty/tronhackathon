@@ -71,14 +71,19 @@ app.get('/map/:address/:symbol/:amount/:tronAddress', function(req,res){
                     });
                 (async () => {
                     try {
-                        let contract = await tronWeb.contract(contractInfo.tronDai.abi).at(contractInfo.tronDai.address);
+                        let abi = contractInfo.tronDai.abi;
+
+                        let contract = await tronWeb.contract(abi=abi).at(contractInfo.tronDai.address);
                         let param = {
                             feeLimit: 1000000000,
                             callValue: 0,
                             shouldPollResponse: true
                         };
-                        let result = await contract.emit(req.params.tronAddress, req.params.amount);
-                        console.log('result: ', result);
+                        let receipt = await contract.mint(req.params.tronAddress, req.params.amount).send({shouldPollResponse:true})
+
+                        res.json({ status: receipt});
+
+                        console.log('result: ', receipt);
                     } catch(e){
                         console.error(e);
                     }
