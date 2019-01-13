@@ -4,8 +4,9 @@ const Tx = require('ethereumjs-tx');
 const contractInfo = require('./contractInfo')
 const bs58 = require('bs58');
 const TronWeb = require('TronWeb');
-const HttpProvider = TronWeb.providers.HttpProvider;
+var cors = require('cors');
 const app = express();
+app.use(cors());
 
 
 //Infura HttpProvider Endpoint
@@ -61,9 +62,9 @@ app.get('/map/:address/:symbol/:amount/:tronAddress', function(req,res){
         //signing transaction with private key
         transaction.sign(ethPrivateKey);
         //sending transacton via web3js module
-
+        var tx;
         web3js.eth.sendSignedTransaction('0x'+transaction.serialize().toString('hex'))
-            .on('transactionHash', tx => console.log('tx:', tx))
+            .on('transactionHash', tx_ => tx = tx_)
             .on('receipt', receipt => {
                 ethContract.methods.balanceOfFreezed(req.params.address, symbol).call()
                     .then(function(balance){
@@ -81,7 +82,7 @@ app.get('/map/:address/:symbol/:amount/:tronAddress', function(req,res){
                         };
                         let receipt = await contract.mint(req.params.tronAddress, req.params.amount).send({shouldPollResponse:true})
 
-                        res.json({ status: receipt});
+                        res.json({ status: receipt, tx: tx});
 
                         console.log('result: ', receipt);
                     } catch(e){

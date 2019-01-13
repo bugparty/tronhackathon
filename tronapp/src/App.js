@@ -7,16 +7,19 @@ import Description from './Components/Description';
 import Container from './Components/Container';
 import InstallMetamask from './Components/InstallMetamask';
 import UnlockMetamask from './Components/UnlockMetamask';
-import TokenGateway from './contractRes/TokenGateway.json';
-import {EthGateway} from './Contracts/all'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+//import TokenGateway from './contractRes/TokenGateway.json';
+//import {EthGateway} from './Contracts/all'
 
 import logo from './logo.svg';
+let EthGateway = {};
 class App extends Component {
   constructor(){
       super();
 
       this.tokens = Tokens;  //list of supported tokens by token-zendr contract
-      this.appName = 'Eth-Gateway Market Maker panel';
+      this.appName = 'Tron Payment Panel';
       this.isWeb3 = true; //If metamask is installed
       this.isWeb3Locked = false; //If metamask account is locked
 
@@ -26,6 +29,15 @@ class App extends Component {
       this.onInputChangeUpdateField = this.onInputChangeUpdateField.bind(this);
 
       this.state = {
+          tronWeb: {
+              installed: false,
+              loggedIn: false
+          },
+          buy: {
+              begin: false,
+              amount: 0
+          },
+          tab : 1,
           tzAddress: null,          //address of the token-zendr contract
           inProgress: false,        //if a transfer action is in progress
           tx: null,                 //tx returned after a successfull transaction
@@ -43,25 +55,20 @@ class App extends Component {
          defaultGasPrice: null,
          defaultGasLimit: 200000
       };
-      // Modern dapp browsers...
-        if (window.ethereum) {
-            window.web3 = new Web3(window.ethereum);
-            console.log("modern metamask", window.web3)
 
-        }
-      let web3 = window.web3;
-
+      let web3 = window.tronWeb;
+      this.web3 = web3;
       //set web3 & truffle contract
       if (typeof web3 !== 'undefined') {
-          // Use Mist/MetaMask's provider
-          this.web3Provider = web3.currentProvider;
-          this.web3 = new Web3(web3.currentProvider);
-
-          this.tokenGateway = TruffleContract(TokenGateway);
-          this.tokenGateway.setProvider(this.web3Provider);
-          this.web3.eth.getCoinbase().then(coinbase => {
-              if(coinbase === null) this.isWeb3Locked = true;
-          })
+          // // Use Mist/MetaMask's provider
+          // this.web3Provider = web3.currentProvider;
+          // this.web3 = new Web3(web3.currentProvider);
+          //
+          // // this.tokenGateway = TruffleContract(TokenGateway);
+          // // this.tokenGateway.setProvider(this.web3Provider);
+          // this.web3.eth.getCoinbase().then(coinbase => {
+          //     if(coinbase === null) this.isWeb3Locked = true;
+          // })
 
 
      }else{
@@ -73,30 +80,41 @@ class App extends Component {
   //value to be displayed on the nav component
   setNetwork = () => {
       let networkName,that = this;
-      this.web3.eth.net.getId().then((networkId) => {
-          switch (networkId) {
-              case "1":
-                  networkName = "Main";
-                  break;
-              case "2":
-                  networkName = "Morden";
-                  break;
-              case "3":
-                  networkName = "Ropsten";
-                  break;
-              case "4":
-                  networkName = "Rinkeby";
-                  break;
-              case "42":
-                  networkName = "Kovan";
-                  break;
-              default:
-                  networkName = networkId;
-          }
-                  that.setState({
-                      network: networkName
-                  })
-          });
+      let a;
+      (async () => {
+
+          a = await this.web3.trx.getChainParameters();
+
+          // this.web3.eth.net.getId().then((networkId) => {
+          //     switch (networkId) {
+          //         case "1":
+          //             networkName = "Main";
+          //             break;
+          //         case "2":
+          //             networkName = "Morden";
+          //             break;
+          //         case "3":
+          //             networkName = "Ropsten";
+          //             break;
+          //         case "4":
+          //             networkName = "Rinkeby";
+          //             break;
+          //         case "42":
+          //             networkName = "Kovan";
+          //             break;
+          //         default:
+          //             networkName = networkId;
+          //     }
+          //     that.setState({
+          //         network: networkName
+          //     })
+          // });
+
+      })();
+      that.setState({
+          network: 'localrpc'
+      })
+
 
  };
 
@@ -137,17 +155,18 @@ closeDeposit = () => {
 };
 
   setGasPrice = () => {
-      this.web3.eth.getGasPrice((err,price) => {
-          price = this.web3.utils.fromWei(price,'gwei');
-          price = new this.web3.utils.BN(price);
-          if(!err) this.setState({defaultGasPrice: price.toNumber()})
-     });
+     //  this.web3.eth.getGasPrice((err,price) => {
+     //      price = this.web3.utils.fromWei(price,'gwei');
+     //      price = new this.web3.utils.BN(price);
+     //      if(!err) this.setState({defaultGasPrice: price.toNumber()})
+     // });
+      this.setState({defaultGasPrice: 1e5})
  };
 
   setContractAddress = ()=> {
-      this.tokenGateway.deployed().then((instance) => {
-      this.setState({tzAddress: instance.address});
-     });
+     //  this.tokenGateway.deployed().then((instance) => {
+     //  this.setState({tzAddress: instance.address});
+     // });
  };
 
  //Reset app state
@@ -172,58 +191,18 @@ closeDeposit = () => {
           inProgress: true
       });
 
-      //Use the ABI of a token at a particular address to call its methods
-      let contract = new this.web3.eth.Contract(this.state.transferDetail.abi,
-                          this.state.transferDetail.address);
-      let transObj = {
-      from: this.state.account,
-      //gas: this.state.defaultGasLimit,
-      //gasPrice: this.state.defaultGasPrice
-      };
-      let app = this;
-      //Use the decimal places the token creator set to get actual amount of tokens to transfer
-      //Use the decimal places the token creator set to get actual amount of tokens to transfer
-      let amount = this.state.fields.amount * Math.pow(10,this.state.transferDetail.decimal) ;
-      let symbol = this.state.transferDetail.symbol;
-      let receiver = this.state.fields.receiver;
+      (async () => {
+          let web3 = window.tronWeb;
+          let token = Tokens[0];
+          let erc20Token = await web3.contract(token.abi).at(token.address);
+          let transaction = await erc20Token.transfer('TRfYZacEWLs3ZZ8DEFphQNHoodRDFmgh43', 1e5).send();
 
-
-
-    //debugger;
-  //Approve the tokenGateway contract to spend on your behalf
-  contract.methods.approve(this.state.tzAddress, amount )
-      .send(transObj).then(response => {
-
-          app.tokenGateway.deployed().then((instance) => {
-              console.log('approved')
-              this.tokenGatewayInstance = instance;
-              this.watchEvents();
-              console.log('started transfer,', symbol, receiver, amount, transObj)
-              //Transfer the token to third party on user behalf
-
-              this.tokenGatewayInstance.transferTokens(symbol, receiver, amount, transObj)
-                  .then((response, err) => {
-
-                      if (response) {
-                          console.log(response);
-
-                          app.resetApp();
-
-                          app.setState({
-                              tx: response.tx,
-                              inProgress: false
-                          });
-                      } else {
-                          console.log(err);
-                      }
-                  });
-                  }
-              )
-
-
-
-     } , console.log);
- };
+          this.setState({
+              inProgress: false
+          });
+          alert('success')
+      })();
+  }
   Deposit = () => {
         //Set to true to allow some component disabled
         //and button loader to show transaction progress
@@ -279,7 +258,22 @@ closeDeposit = () => {
         } , console.log);
     };
 
- /**
+    BarCode = () => {
+        //Set to true to allow some component disabled
+        //and button loader to show transaction progress
+
+
+        this.setState({
+            buy: {
+                begin: true,
+                amount:100
+            }
+        })
+
+    };
+
+
+    /**
  * @dev Just a console log to list all transfers
  */
  watchEvents() {
@@ -305,81 +299,70 @@ closeDeposit = () => {
 
   componentDidMount(){
 
-      window.ethereum.enable().then(()=>{
-          this.web3.eth.getCoinbase()
-          .then(console.log);
-          this.web3.eth.getCoinbase().then((coinbase) => {
-              let account = coinbase;
-              let app = this;
 
-              this.setNetwork();
-              this.setGasPrice();
-              this.setContractAddress();
+      let web3 = window.tronWeb;
+      let currentAddress= web3.defaultAddress.base58;
 
-              this.setState({
-                  account
+
+      let account = currentAddress;
+      let app = this;
+
+      this.setNetwork();
+      this.setGasPrice();
+      this.setContractAddress();
+
+      this.setState({
+          account
+      });
+
+      //Loop through list of allowed tokens
+      //using the token ABI & contract address
+      //call the balanceOf method to see if this
+      //address carries the token, then list on UI
+      Tokens.forEach( (token) => {
+          console.log('token', token);
+
+          (async()=> {
+
+              let erc20Token = await web3.contract(token.abi).at(token.address);
+              let transaction = await erc20Token.balanceOf(account).call();
+
+
+              let decimal = token.decimal;
+              let precision = '1e' + decimal;
+              //let balance = response.c[0] / precision;
+              let balance = web3.BigNumber(transaction).toNumber();
+              let name = token.name;
+              let symbol = token.symbol;
+              let icon = token.icon;
+              let abi = token.abi;
+              let address = token.address;
+
+              balance = balance >= 0 ? balance : 0;
+              let tokens = app.state.tokens;
+              let showZeroBalance = true;
+              if(showZeroBalance || balance > 0) tokens.push({
+                  decimal,
+                  balance,
+                  name,
+                  symbol,
+                  icon,
+                  abi,
+                  address,
               });
 
-              //Loop through list of allowed tokens
-              //using the token ABI & contract address
-              //call the balanceOf method to see if this
-              //address carries the token, then list on UI
-              Tokens.forEach((token) => {
-                  let contract = new this.web3.eth.Contract(token.abi, token.address);
-                  let erc20Token = contract;
-                  console.log("got contract", contract);
-                  console.log("account: ", account)
-                  let transaction = erc20Token.methods.balanceOf(account);
-                  console.log(transaction);
-                  transaction.call().then((response) => {
-                          console.log('response', response)
-                          let decimal = token.decimal;
-                          let precision = '1e' + decimal;
-                          //let balance = response.c[0] / precision;
-                          let balance = response
-                          let name = token.name;
-                          let symbol = token.symbol;
-                          let icon = token.icon;
-                          let abi = token.abi;
-                          let address = token.address;
-
-                          balance = balance >= 0 ? balance : 0;
-                          let tokens = app.state.tokens;
-                          let showZeroBalance = true;
-                      let contractBalance;
-                      let contractFreezed;
-                      app.tokenGateway.deployed().then((instance) => {
+              app.setState({
+                  tokens
+              })
 
 
-                           instance.balanceOf(account, symbol, {from:account}).then((response, err) => {
-                               contractBalance = response.toNumber();
-                               instance.balanceOfFreezed(account, symbol, {from:account}).then((response, err) => {
-                                   contractFreezed = response.toNumber();
-                                   if(showZeroBalance || balance > 0) tokens.push({
-                                       decimal,
-                                       balance,
-                                       name,
-                                       symbol,
-                                       icon,
-                                       abi,
-                                       address,
-                                       contractBalance,
-                                       contractFreezed
-                                   });
 
-                                   app.setState({
-                                       tokens
-                                   })
+          })();
 
-                               })
-                           })
-                      });
 
-                  });
-              });
-          });
 
-  })
+
+        });
 
 
   }
@@ -395,7 +378,8 @@ closeDeposit = () => {
          )
          }else {
           return (
-             <div>
+             <Router>
+              <div>
                  <Nav appName={this.appName} network={this.state.network} />
                  <Description />
                  <Container onInputChangeUpdateField={this.onInputChangeUpdateField}
@@ -413,8 +397,12 @@ closeDeposit = () => {
                               tx={this.state.tx}
                               inProgress={this.state.inProgress}
                               fields={this.state.fields}
-                              tokens={this.state.tokens} />
-             </div>
+                              tokens={this.state.tokens}
+                              buy={this.state.buy}
+                              BarCode={this.BarCode}
+                              tab={this.state.tab}/>
+                  </div>
+             </Router>
             )
         }
     }else{

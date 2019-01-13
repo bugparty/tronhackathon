@@ -34,6 +34,11 @@ class tokenBlock extends React.Component {
                                             Withdraw
                                         </button>
                                     </div>
+                                    <div className="column is-1 has-text-centered">
+                                        <button onClick={() => this.props.newMapTron(index) } className="button is-outlined is-small is-danger">
+                                        Map to Tron
+                                        </button>
+                                    </div>
                                 </div>
                             )
                         })

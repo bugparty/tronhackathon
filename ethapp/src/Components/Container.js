@@ -7,7 +7,8 @@ import TransferToken from './TransferToken';
 import TransferHeader from './TransferHeader';
 import SuccessTransaction from './SuccessTransaction';
 import DepositToken from './DepositToken';
-
+import MapTron from './MapTron';
+import MapTronHeader from './MapTronHeader';
 class Container extends Component {
   render(){
       return (
@@ -50,10 +51,24 @@ class Container extends Component {
                              defaultGasLimit={this.props.defaultGasLimit}
                              onInputChangeUpdateField={this.props.onInputChangeUpdateField}/>
                          </div> :
+                         this.props.mapTronDetail.hasOwnProperty('name') ?
+                     <div>
+                     <MapTronHeader token={this.props.mapTronDetail} />
+                     <MapTron closeMapTron={this.props.closeMapTron}
+                         mapTronDetail={this.props.mapTronDetail}
+                         fields={this.props.fields}
+                         account={this.props.account}
+                         MapTron={this.props.MapTron}
+                         inProgress={this.props.inProgress}
+                         defaultGasPrice={this.props.defaultGasPrice}
+                         defaultGasLimit={this.props.defaultGasLimit}
+                         onInputChangeUpdateField={this.props.onInputChangeUpdateField}/>
+                     </div> :
 
                          <div className={this.props.tx ? 'is-hidden' : ''}>
                              <SortTokenBlock />
-                             <TokenBlock newTransfer={this.props.newTransfer} tokens={this.props.tokens} newDeposit={this.props.newDeposit} />
+                             <TokenBlock newTransfer={this.props.newTransfer} tokens={this.props.tokens}
+                             newDeposit={this.props.newDeposit}  newMapTron={this.props.newMapTron}/>
                          </div>
                      }
 

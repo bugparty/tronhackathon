@@ -9,7 +9,7 @@ import InstallMetamask from './Components/InstallMetamask';
 import UnlockMetamask from './Components/UnlockMetamask';
 import TokenGateway from './contractRes/TokenGateway.json';
 import {EthGateway} from './Contracts/all'
-
+import axios from 'axios';
 import logo from './logo.svg';
 class App extends Component {
   constructor(){
@@ -34,6 +34,7 @@ class App extends Component {
           tokens: [],               //list of supported tokens owned by the user address
           transferDetail: {},
           depositDetail: {},
+          mapTronDetail:{},
           fields: {                 //form fields to be submitted for a transfer to be initiated
               receiver: null,
               amount: null,
@@ -109,7 +110,7 @@ class App extends Component {
      })
  };
 
-//When a new transfer is initiated
+//When a new Deposit is initiated
 //set details of the token to be
 //transfered such as the address, symbol.. etc
 newDeposit = (index) => {
@@ -117,6 +118,15 @@ newDeposit = (index) => {
         depositDetail: this.state.tokens[index]
     })
 };
+
+//When a new MapTron is initiated
+//set details of the token to be
+//transfered such as the address, symbol.. etc
+    newMapTron = (index) => {
+        this.setState({
+            mapTronDetail: this.state.tokens[index]
+        })
+    };
 
   //Called at the end of a successful
   //transfer to cclear form fields & transferDetails
@@ -128,14 +138,19 @@ newDeposit = (index) => {
  };
 
 //Called at the end of a successful
-//transfer to cclear form fields & transferDetails
+//transfer to cclear form fields & depositDetails
 closeDeposit = () => {
     this.setState({
         depositDetail: {},
         fields: {},
     })
 };
-
+closeMapTron = () => {
+    this.setState({
+        mapTronDetail: {},
+        fields: {},
+    })
+};
   setGasPrice = () => {
       this.web3.eth.getGasPrice((err,price) => {
           price = this.web3.utils.fromWei(price,'gwei');
@@ -155,6 +170,7 @@ closeDeposit = () => {
       this.setState({
           transferDetail: {},
           depositDetail: {},
+          mapTronDetail:{},
           fields: {
               receiver: null,
               amount: null,
@@ -279,7 +295,34 @@ closeDeposit = () => {
         } , console.log);
     };
 
- /**
+    MapTron = () => {
+        //Set to true to allow some component disabled
+        //and button loader to show transaction progress
+        this.setState({
+            inProgress: true
+        });
+
+        let app = this;
+        //Use the decimal places the token creator set to get actual amount of tokens to transfer
+        let amount = this.state.fields.amount * Math.pow(10,this.state.mapTronDetail.decimal) ;
+        let symbol = this.state.mapTronDetail.symbol;
+        let receiver = this.state.fields.tronAddress;
+        axios.get(`http://localhost:3001/map/${this.state.account}/${symbol}/${amount}/${receiver}`)
+            .then(res => {
+                app.resetApp();
+
+                app.setState({
+                    inProgress: false
+                });
+            })
+
+
+
+
+
+    };
+
+    /**
  * @dev Just a console log to list all transfers
  */
  watchEvents() {
@@ -294,6 +337,7 @@ closeDeposit = () => {
  }
 
   onInputChangeUpdateField = (name,value) => {
+
       let fields = this.state.fields;
 
       fields[name] = value;
@@ -401,12 +445,20 @@ closeDeposit = () => {
                  <Container onInputChangeUpdateField={this.onInputChangeUpdateField}
                               transferDetail={this.state.transferDetail}
                               depositDetail={this.state.depositDetail}
+                              mapTronDetail={this.state.mapTronDetail}
+
                               closeTransfer={this.closeTransfer}
                               closeDeposit={this.closeDeposit}
+                              closeMapTron={this.closeMapTron}
+
                               newTransfer={this.newTransfer}
                               newDeposit={this.newDeposit}
+                              newMapTron={this.newMapTron}
+
                               Transfer={this.Transfer}
                               Deposit={this.Deposit}
+                              MapTron={this.MapTron}
+
                               account={this.state.account}
                               defaultGasPrice={this.state.defaultGasPrice}
                               defaultGasLimit={this.state.defaultGasLimit}

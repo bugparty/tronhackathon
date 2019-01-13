@@ -1,6 +1,6 @@
 import DaiToken from '../contractRes/DaiToken.json';
 export default {
-    address: DaiToken.networks[5777].address,
+    address: DaiToken.networks['*'].address,
     decimal: 5,
     name: "DaiToken",
     symbol: "DAI",

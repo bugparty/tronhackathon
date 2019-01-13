@@ -7,59 +7,30 @@ import TransferToken from './TransferToken';
 import TransferHeader from './TransferHeader';
 import SuccessTransaction from './SuccessTransaction';
 import DepositToken from './DepositToken';
-
+import AssertsPage from './AssertsPage';
+import CustomerPage from './CustomerPage';
+import MerchantPage from './MerchantPage';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Container extends Component {
   render(){
       return (
          <section className="container">
              <div className="columns">
-                <div className=" column">
-                         <div className="panel">
-                         {  this.props.tx ?
-                         <SuccessTransaction tx={this.props.tx} /> :
-                          ''
-                          }
+          <Route
+      path="/" exact
+      render={ () => <AssertsPage {...this.props} />}
 
+      />
+      <Route
+      path="/customer"
+      render={ () => <CustomerPage {...this.props} />}
 
-                     <AddressBar account={this.props.account} tx={this.props.tx}/>
-                     {
-                         this.props.transferDetail.hasOwnProperty('name') ?
-                         <div>
-                             <TransferHeader token={this.props.transferDetail} />
-                             <TransferToken closeTransfer={this.props.closeTransfer}
-                                          transferDetail={this.props.transferDetail}
-                                          fields={this.props.fields}
-                                          account={this.props.account}
-                                          Transfer={this.props.Transfer}
-                                          Deposit={this.props.Deposit}
-                                          inProgress={this.props.inProgress}
-                                          defaultGasPrice={this.props.defaultGasPrice}
-                                          defaultGasLimit={this.props.defaultGasLimit}
-                                          onInputChangeUpdateField={this.props.onInputChangeUpdateField}/>
-                        </div> :
-                         this.props.depositDetail.hasOwnProperty('name') ?
-                         <div>
-                         <TransferHeader token={this.props.depositDetail} />
-                         <DepositToken closeDeposit={this.props.closeDeposit}
-                             transferDetail={this.props.depositDetail}
-                             fields={this.props.fields}
-                             account={this.props.account}
-                             Deposit={this.props.Deposit}
-                             inProgress={this.props.inProgress}
-                             defaultGasPrice={this.props.defaultGasPrice}
-                             defaultGasLimit={this.props.defaultGasLimit}
-                             onInputChangeUpdateField={this.props.onInputChangeUpdateField}/>
-                         </div> :
+      />
+      <Route
+      path="/merchant"
+      render={ () => <MerchantPage {...this.props} />}
 
-                         <div className={this.props.tx ? 'is-hidden' : ''}>
-                             <SortTokenBlock />
-                             <TokenBlock newTransfer={this.props.newTransfer} tokens={this.props.tokens} newDeposit={this.props.newDeposit} />
-                         </div>
-                     }
-
-                     <TradeMarkBlock tx={this.props.tx}/>
-                     </div>
-                 </div>
+      />
              </div>
          </section>
          )

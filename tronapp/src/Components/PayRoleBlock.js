@@ -1,6 +1,6 @@
 import React from 'react';
 
-class tokenBlock extends React.Component {
+class PayRoleBlock extends React.Component {
     render() {
         return (
             <div className="panel-block is-paddingless " >
@@ -16,16 +16,19 @@ class tokenBlock extends React.Component {
                                         {token.symbol}
                                     </div>
                                     <div className="column is-2  is-ellipsis">
-                                        {token.balance / 10.0 ** 5}
+                                        RMB 6 yuan
                                     </div>
-                                    <div className="column is-2 is-offset-3 has-text-centered">
+                                <div className="column is-2  is-ellipsis">
+                                    1 DAI
+                                </div>
+                                    <div className="column is-2  has-text-centered">
                                         <button onClick={() => this.props.newDeposit(index) } className="button is-outlined is-small ">
-                                        Deposit
+                                Reject
                                         </button>
                                     </div>
                                     <div className="column is-2  has-text-centered">
-                                        <button onClick={() => this.props.newTransfer(index) } className="button is-outlined is-small is-danger">
-                                            Withdraw
+                                        <button onClick={() => this.props.Transfer() } className="button is-outlined is-small is-danger">
+                                Confirm
                                         </button>
                                     </div>
                                 </div>
@@ -38,4 +41,4 @@ class tokenBlock extends React.Component {
     }
 }
 
-export default tokenBlock;
+export default PayRoleBlock;

@@ -1,8 +1,7 @@
 import Dai from './Dai';
-import Pax from './Pax';
 
 const Tokens = [
-    Dai,Pax
+    Dai
 ];
 
 export default Tokens;

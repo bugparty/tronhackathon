@@ -13,6 +13,7 @@
     "openzeppelin-solidity": "^1.10.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bulma-start": "0.0.2",
     "openzeppelin-solidity": "^1.10.0",
     "react": "16.6.3",
