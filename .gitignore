@@ -1,4 +1,7 @@
 build/*
 node_modules/*
 .keys
-
+.secret
+gatewayd/.secret
+gatewayd/.tronsecret
+gatewayd/node_modules

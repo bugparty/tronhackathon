@@ -1,0 +1,20 @@
+{
+  "name": "gatewayd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gatewayd.js",
+  "scripts": {
+    "start": "node gatewayd.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bs58": "^4.0.1",
+    "ethereumjs-tx": "^1.3.7",
+    "express": "^4.16.4",
+    "tronweb": "^2.1.27",
+    "web3": "^1.0.0-beta.37"
+  }
+}
