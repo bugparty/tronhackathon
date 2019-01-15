@@ -22,6 +22,10 @@ class CustomerPage extends React.Component {
             !this.props.buy.begin ? <BuyToken {...this.props}/> :
         <BarCode {...this.props}/>
             }
+    <
+        TradeMarkBlock
+        tx = {this.props.tx}
+        />
         </div>
         </div>
         )

@@ -91,26 +91,7 @@ app.get('/map/:address/:symbol/:amount/:tronAddress', function(req,res){
 
                     console.log('complement.');
                 })();
-                // tronWeb.eth.getTransactionCount(tronAdminAddress).then(function(v){
-                //     const count = v;
-                //     console.log("Tron Count: "+v);
-                //     var rawTransaction = {"from":tronAdminAddress,
-                //         "gasPrice":web3js.utils.toHex(20* 1e9),
-                //         "gasLimit":web3js.utils.toHex(210000),
-                //         "to":contractInfo.tronDai.address,"value":"0x0",
-                //         "data":ethContract.methods.mint(userAddress, req.params.amount).encodeABI(),
-                //         "nonce":web3js.utils.toHex(count)}
-                //     console.log(rawTransaction);
-                //     //creating tranaction via ethereumjs-tx
-                //     var transaction = new Tx(rawTransaction);
-                //     //signing transaction with private key
-                //     transaction.sign(tronPrivateKey);
-                //     web3tron.eth.sendSignedTransaction('0x'+transaction.serialize().toString('hex'))
-                //         .on('transactionHash', tx => console.log('tx:', tx))
-                //         .on('receipt', receipt => {
-                //             res.json({ status: receipt.status });
-                //         });
-                // });
+
 
                 });
             });

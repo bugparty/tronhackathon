@@ -1,6 +1,8 @@
 import React from 'react';
 
-function Description(props) {
+class Description extends React.Component {
+
+render() {
   return (
      <section className="container">
          <div className="has-text-centered content">
@@ -10,5 +12,8 @@ function Description(props) {
          </div>
      </section>
  )}
+
+
+ }
 
 export default Description;

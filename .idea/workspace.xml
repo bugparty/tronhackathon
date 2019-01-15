@@ -5,45 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6e47cdd-6ba5-4cf0-b810-a99ce6ca7182" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/MapTron.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ethapp/src/Components/MapTronHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/public/icons/DaiToken.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/public/icons/PaxToken.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/public/icons/barcode.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/public/icons/barcode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/public/icons/bear_x28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/public/icons/metamask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/src/Components/AssertsPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/src/Components/BarCode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/src/Components/BuyToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/src/Components/ConfirmToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/src/Components/CustomerPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/src/Components/Description2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/src/Components/MerchantPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronapp/src/Components/PayRoleBlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethapp/src/Components/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/src/Components/Container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethapp/src/Components/SortTokenBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/src/Components/SortTokenBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethapp/src/Components/TokenBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/ethapp/src/Components/TokenBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethapp/contracts/PaxTokenERC20.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethapp/contracts/WalletContract.sol" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gatewayd/gatewayd.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayd/gatewayd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayd/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayd/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tronapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tronapp/src/Components/AddressBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/Components/AddressBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tronapp/src/Components/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/Components/Container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tronapp/src/Components/CustomerPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/Components/CustomerPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tronapp/src/Components/Description.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/Components/Description.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tronapp/src/Components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/Components/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tronapp/src/Components/TokenBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/Components/TokenBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tronapp/src/Tokens/Dai.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/Tokens/Dai.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tronapp/src/Tokens/Pax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tronapp/src/Tokens/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/Tokens/all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tronapp/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tronapp/src/Components/MerchantPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/tronapp/src/Components/MerchantPage.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/tronapp/src/Components/AssertsPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="178">
-              <caret line="53" column="125" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="125" />
+              <caret line="53" column="125" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="125" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -69,19 +38,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tronapp/src/Components/PayRoleBlock.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tronapp/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="196" column="52" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="52" />
+            <state relative-caret-position="345">
+              <caret line="208" column="23" selection-start-line="208" selection-start-column="23" selection-end-line="208" selection-end-column="23" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -90,24 +50,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tronapp/src/Tokens/all.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gatewayd/package.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tronapp/src/Components/MerchantPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="285">
+              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -118,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tronapp/src/Components/CustomerPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="203">
+              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -128,13 +74,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tronapp/src/Components/Container.js">
+        <entry file="file://$PROJECT_DIR$/tronapp/src/Components/Description.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -142,16 +85,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gatewayd/gatewayd.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="84" column="42" lean-forward="true" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+            <state relative-caret-position="1395">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tronapp/contracts/tokens/TRC20/TRC20.sol">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="165">
+                <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tronapp/contracts/DaiToken.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-840" />
+            <state relative-caret-position="105">
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tronapp/contracts/utils/PaxToken.sol">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gatewayd/contractInfo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -178,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ethapp/src/Tokens/all.js" />
         <option value="$PROJECT_DIR$/ethapp/package.json" />
         <option value="$PROJECT_DIR$/ethapp/build/contracts/DaiToken.json" />
         <option value="$PROJECT_DIR$/tronapp/migrations/2_deploy_contracts.js" />
@@ -211,7 +181,6 @@
         <option value="$PROJECT_DIR$/ethapp/src/Components/MapTronHeader.js" />
         <option value="$PROJECT_DIR$/ethapp/src/Components/Container.js" />
         <option value="$PROJECT_DIR$/ethapp/src/App.js" />
-        <option value="$PROJECT_DIR$/gatewayd/gatewayd.js" />
         <option value="$PROJECT_DIR$/tronapp/src/Tokens/all.js" />
         <option value="$PROJECT_DIR$/tronapp/src/Tokens/Dai.js" />
         <option value="$PROJECT_DIR$/tronapp/package.json" />
@@ -220,15 +189,17 @@
         <option value="$PROJECT_DIR$/tronapp/src/Components/TokenBlock.js" />
         <option value="$PROJECT_DIR$/tronapp/src/Components/AssertsPage.js" />
         <option value="$PROJECT_DIR$/tronapp/src/Components/Nav.js" />
-        <option value="$PROJECT_DIR$/tronapp/src/Components/Description.js" />
         <option value="$PROJECT_DIR$/tronapp/src/Components/Description2.js" />
-        <option value="$PROJECT_DIR$/tronapp/src/Components/CustomerPage.js" />
         <option value="$PROJECT_DIR$/tronapp/src/Components/BuyToken.js" />
         <option value="$PROJECT_DIR$/tronapp/src/Components/Container.js" />
         <option value="$PROJECT_DIR$/tronapp/src/Components/BarCode.js" />
         <option value="$PROJECT_DIR$/tronapp/src/Components/PayRoleBlock.js" />
-        <option value="$PROJECT_DIR$/tronapp/src/Components/MerchantPage.js" />
         <option value="$PROJECT_DIR$/tronapp/src/App.js" />
+        <option value="$PROJECT_DIR$/tronapp/src/Components/MerchantPage.js" />
+        <option value="$PROJECT_DIR$/tronapp/src/Components/CustomerPage.js" />
+        <option value="$PROJECT_DIR$/tronapp/src/Components/Description.js" />
+        <option value="$PROJECT_DIR$/gatewayd/gatewayd.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -252,18 +223,7 @@
             <path>
               <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
               <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="gatewayd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
               <item name="tronapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
@@ -276,55 +236,7 @@
               <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
               <item name="tronapp" type="462c0819:PsiDirectoryNode" />
               <item name="contracts" type="462c0819:PsiDirectoryNode" />
-              <item name="tokens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-              <item name="tokens" type="462c0819:PsiDirectoryNode" />
-              <item name="TRC20" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Contracts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="protonwallet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="protonwallet" type="462c0819:PsiDirectoryNode" />
-              <item name="tronapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Tokens" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -344,11 +256,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tronapp/contracts/utils" />
       <recent name="$PROJECT_DIR$/tronapp/src/Components" />
       <recent name="$PROJECT_DIR$/tronapp" />
       <recent name="$PROJECT_DIR$/ethapp/src/Components" />
       <recent name="$PROJECT_DIR$/gatewayd" />
-      <recent name="$PROJECT_DIR$/ethapp/contracts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tronapp/public/icons" />
@@ -417,30 +329,29 @@
       <workItem from="1547196429748" duration="20981000" />
       <workItem from="1547290832129" duration="64000" />
       <workItem from="1547290920500" duration="15836000" />
-      <workItem from="1547310953786" duration="41210000" />
+      <workItem from="1547310953786" duration="43864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78091000" />
+    <option name="totallyTimeSpent" value="80745000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="792" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="792" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32857144" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32142857" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32142857" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -467,25 +378,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tronapp/build/contracts/DaiToken.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="1335" column="1" lean-forward="true" selection-start-line="1335" selection-start-column="1" selection-end-line="1335" selection-end-column="1" />
-          <folding>
-            <element signature="e#41#7016#0" />
-            <element signature="n#!!block;n#ast#0;n#!!top" />
-            <element signature="n#!!block;n#legacyAST#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gatewayd/node_modules/tronweb/dist/TronWeb.node.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16263" selection-start-column="16263" selection-end-column="16263" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ethapp/src/Contracts/EthGateway.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -510,13 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gatewayd/contractInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tronapp/contracts/tokens/TRC20/TRC20Mintable.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -528,13 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tronapp/contracts/DaiToken.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -699,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tronapp/src/Components/Description.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tronapp/src/Components/Nav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-47">
@@ -742,26 +613,6 @@
         <state relative-caret-position="-45" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tronapp/src/Components/AssertsPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="53" column="125" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="125" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tronapp/src/Components/CustomerPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tronapp/src/Components/Container.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -775,29 +626,12 @@
     <entry file="file://$PROJECT_DIR$/tronapp/src/Components/PayRoleBlock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tronapp/src/Components/MerchantPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gatewayd/package.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gatewayd/gatewayd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="84" column="42" lean-forward="true" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tronapp/contracts/tokens/TRC20/TRC20.sol">
       <provider selected="true" editor-type-id="text-editor">
@@ -807,19 +641,90 @@
     <entry file="file://$PROJECT_DIR$/tronapp/src/Tokens/all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tronapp/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="196" column="52" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="52" />
+        <state relative-caret-position="345">
+          <caret line="208" column="23" selection-start-line="208" selection-start-column="23" selection-end-line="208" selection-end-column="23" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/src/Components/AssertsPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="53" column="125" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="125" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/src/Components/MerchantPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/src/Components/CustomerPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/src/Components/Description.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatewayd/contractInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatewayd/gatewayd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/contracts/DaiToken.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tronapp/contracts/utils/PaxToken.sol">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

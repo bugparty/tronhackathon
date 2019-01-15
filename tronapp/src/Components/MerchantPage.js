@@ -24,11 +24,12 @@ class MerchantPage extends React.Component {
         />
 
 
-    <
+
+        <PayRoleBlock Transfer={this.props.Transfer} tokens={this.props.tokens} newDeposit={this.props.newDeposit} />
+        <
         TradeMarkBlock
         tx = {this.props.tx}
         />
-        <PayRoleBlock Transfer={this.props.Transfer} tokens={this.props.tokens} newDeposit={this.props.newDeposit} />
         < /div>
         < /div>
     )
